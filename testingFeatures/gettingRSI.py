@@ -1,0 +1,1 @@
+#use alpha vantage to get the rsi data and work out if i should buy or sell the stock
