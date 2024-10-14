@@ -1,0 +1,19 @@
+name: Example Workflow
+
+on: 
+  push:
+    branches:
+      - main
+
+jobs:
+  example_job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Use secret key
+        run: echo "The secret key is ${{ secrets.MY_SECRET_KEY }}"
+        env:
+          MY_SECRET_KEY: ${{ secrets.MY_SECRET_KEY }}
